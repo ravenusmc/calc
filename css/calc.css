@@ -6,5 +6,31 @@ body {
 }
 
 .main_container {
-  
+  height: 500px;
+  width: 500px;
+  background-color: #6793db;
+
+}
+
+button {
+  height: 50px;
+  width: 50px;
+}
+
+.number_area_one {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.number_area_two {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.number_area_three {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
 }
