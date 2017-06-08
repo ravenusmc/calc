@@ -8,23 +8,25 @@
 
     <div class='body_container'>
         <h1 class='heading_title'>Mike's Tic Tac Toe</h1>
+        <button id='start'>Start</button>
         <div class='game_board'>
             <div class='row_one'>
-                <div class='one_square' id='square-one'></div>
-                <div class='two_square' id='square-two'></div>
-                <div class='three_square' id='square-three'></div>
+                <div onClick='change_one(player, game_array)' class='one_square' id='square-one'>1</div>
+                <div onClick='change_two(player, game_array)' class='two_square' id='square-two'>2</div>
+                <div onClick='change_three(player, game_array)' class='three_square' id='square-three'>3</div>
             </div>
             <div class='row_two'>
-                <div class='four_square' id='square-four'></div>
-                <div class='five_square' id='square-five'></div>
-                <div class='six_square' id='square-six'></div>
+                <div class='four_square' id='square-four'>4</div>
+                <div class='five_square' id='square-five'>5</div>
+                <div class='six_square' id='square-six'>6</div>
             </div>
             <div class='row_three'>
-                <div class='seven_square' id='square-seven'></div>
-                <div class='eight_square' id='square-eight'></div>
-                <div class='nine_square' id='square-nine'></div>
+                <div class='seven_square' id='square-seven'>7</div>
+                <div class='eight_square' id='square-eight'>8</div>
+                <div class='nine_square' id='square-nine'>9</div>
             </div>
         </div>
+        <button onClick='check(game_array)'>Check Winner</button>
 
     </div>
 

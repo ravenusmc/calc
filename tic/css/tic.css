@@ -22,7 +22,8 @@ body {
 .game_board {
   width: 200px;
   height: 200px;
-  border: 1px solid black;
+  background-color: #920ccc; 
+  border-radius: 5px;
 }
 
 .row_one {
@@ -142,6 +143,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+button {
+  margin-top: 10px;
+  background-color: orange;
+  border-radius: 3px;
+  padding: 5px;
 }
 
 
