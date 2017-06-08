@@ -1,7 +1,10 @@
 # J.S. Calc
 ## Intro
 
-This is a simple JavaScript Calculator. I will be working on it in between my larger projects. Since I have seen it on Free Code Camp, I have wanted to build this for a while now. 
+This is a collection of javascript projects that I will be working on from time to time. So far, the projects in it are the following: 
+
+1. Calculator 
+2. Tic Tac Toe Game 
 
 # Getting started
 ### Installing
