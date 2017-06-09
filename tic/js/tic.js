@@ -1,8 +1,27 @@
-function init() {
+document.querySelector("#start").addEventListener('click', function(){
+    alert('Player One Start!');
+    var player = 'one';
+    var game_over = false;
 
-    // alert("Player One Go!");
-    
+    while (game_over == false ){
+
+        playerOne(player);
+        
+        // document.querySelector('.one_square').addEventListener('click', function(){
+        // alert('test');
+        // })
+        game_over = true;
+    }
+
+});
+
+function playerOne(player){
+    document.querySelector('#square-' + player).addEventListener('click', function(){
+        document.querySelector('.one_square').textContent = 'T'; 
+    });
 }
+
+////////////////////////////////////
 
 var player = 'one';
 var game_array = [0,1,2,3,4,5,6,7,8]
@@ -59,7 +78,7 @@ function check(game_array){
 
 
 
-window.onload = init;
+// window.onload = init;
 
 
 
