@@ -3,6 +3,12 @@ body {
     background-image: url(https://source.unsplash.com/21FqSKZQGzI) 
 }
 
+h1 {
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
 .main_container {
   display: flex;
   flex-direction: row;
@@ -65,6 +71,7 @@ body {
 .one_square {
   height: 50px;
   width: 50px;
+  font-size: 30px;
   border-right: 3px solid white;
   border-bottom: 3px solid white;
   padding-right: 10px;
@@ -75,6 +82,7 @@ body {
 }
 
 .two_square {
+  font-size: 30px;
   height: 50px;
   width: 50px;
   border-bottom: 3px solid white;
@@ -85,6 +93,7 @@ body {
 }
 
 .three_square {
+  font-size: 30px;
   height: 50px;
   width: 50px;
   border-left: 3px solid white;
@@ -96,6 +105,7 @@ body {
 }
 
 .four_square {
+  font-size: 30px;
   height: 50px;
   width: 50px;
   border-right: 3px solid white;
@@ -108,6 +118,7 @@ body {
 }
 
 .five_square {
+  font-size: 30px;
   height: 50px;
   width: 50px;
   border-right: 3px solid white;
@@ -119,6 +130,7 @@ body {
 }
 
 .six_square {
+  font-size: 30px;
   height: 50px;
   width: 50px;
   border-bottom: 3px solid white;
@@ -129,6 +141,7 @@ body {
 }
 
 .seven_square {
+  font-size: 30px;
   height: 50px;
   width: 50px;
   border-right: 3px solid white;
@@ -140,6 +153,7 @@ body {
 }
 
 .eight_square {
+  font-size: 30px;
   height: 50px;
   width: 50px;
   border-right: 3px solid white;
@@ -150,6 +164,7 @@ body {
 }
 
 .nine_square {
+  font-size: 30px;
   height: 50px;
   width: 50px;
   display: flex;
@@ -164,5 +179,7 @@ button {
   border-radius: 3px;
   padding: 5px;
 }
+
+
 
 
