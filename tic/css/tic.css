@@ -1,6 +1,9 @@
 body {
-/*  background-color: #6d9ce8;*/
-    background-image: url(https://source.unsplash.com/21FqSKZQGzI) 
+    background-image: url(https://source.unsplash.com/21FqSKZQGzI);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 650px;
 }
 
 h1 {
@@ -178,7 +181,9 @@ button {
   border: 1px solid orange;
   background-color: orange;
   border-radius: 3px;
-  padding: 5px;
+  padding: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
 }
 
 
