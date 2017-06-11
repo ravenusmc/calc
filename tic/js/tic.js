@@ -145,7 +145,7 @@ document.querySelector(".seven_square").addEventListener('click', function(){
 
 document.querySelector(".eight_square").addEventListener('click', function(){
 
-    var checkMove = document.querySelector('.seven_square').textContent;
+    var checkMove = document.querySelector('.eight_square').textContent;
 
     if (checkMove == 'X' || checkMove == 'O'){
         alert('Sorry not valid move!')
@@ -163,15 +163,22 @@ document.querySelector(".eight_square").addEventListener('click', function(){
 });
 
 document.querySelector(".nine_square").addEventListener('click', function(){
-    if (player == 'one'){
-        document.querySelector('.nine_square').textContent = 'X';
-        game_array[8] = 'X';
-    }else{
-        document.querySelector('.nine_square').textContent = 'O';
-        game_array[8] = 'O';
+
+    var checkMove = document.querySelector('.nine_square').textContent;
+
+    if (checkMove == 'X' || checkMove == 'O'){
+        alert('Sorry not valid move!')
+    }else {
+        if (player == 'one'){
+            document.querySelector('.nine_square').textContent = 'X';
+            game_array[8] = 'X';
+        }else{
+            document.querySelector('.nine_square').textContent = 'O';
+            game_array[8] = 'O';
+        }
+        nextPlayer();
+        check();
     }
-    nextPlayer();
-    check();
 });
 
 //This function will determine a winner. It will run each time a player makes a move. 
