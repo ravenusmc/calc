@@ -192,7 +192,7 @@ function check(){
         (game_array[0] == 'X' && game_array[4] == 'X' && game_array[8] == 'X') ||
         (game_array[2] == 'X' && game_array[4] == 'X' && game_array[6] == 'X')
         ){
-        alert('Player One Wins!!!');
+        document.querySelector('.p_one').innerHTML = "Winner!!";
     }else if ((game_array[0] == 'O' && game_array[1] == 'O' && game_array[2] == 'O') ||  
             (game_array[3] == 'O' && game_array[4] == 'O' && game_array[5] == 'O') ||
             (game_array[6] == 'O' && game_array[7] == 'O' && game_array[8] == 'O') ||
@@ -201,7 +201,7 @@ function check(){
             (game_array[2] == 'O' && game_array[5] == 'O' && game_array[8] == 'O') ||
             (game_array[0] == 'O' && game_array[4] == 'O' && game_array[8] == 'O') ||
             (game_array[2] == 'O' && game_array[4] == 'O' && game_array[6] == 'O')) {
-        alert('Player Two Wins!!!!');
+        document.querySelector('.p_two').innerHTML = "Winner!!";
     }
 }
 
@@ -220,6 +220,34 @@ function nextPlayer(){
         document.querySelector('.p_two').classList.add('player_label');
     }
 }
+
+//Here I allow the players to reset the board. 
+document.querySelector('#reset').addEventListener('click', function(){
+
+    //Changing the squares back to their original values. 
+    document.querySelector('.one_square').textContent = '1';
+    document.querySelector('.two_square').textContent = '2';
+    document.querySelector('.three_square').textContent = '3';
+    document.querySelector('.four_square').textContent = '4';
+    document.querySelector('.five_square').textContent = '5';
+    document.querySelector('.six_square').textContent = '6';
+    document.querySelector('.seven_square').textContent = '7';
+    document.querySelector('.eight_square').textContent = '8';
+    document.querySelector('.nine_square').textContent = '9';
+
+    //Changing the player logos back to the right color.
+    document.querySelector('.p_two').classList.add('current_player');
+    document.querySelector('.p_one').classList.remove('current_player');
+    document.querySelector('.p_one').classList.add('player_label');
+    document.querySelector('.p_one').classList.add('current_player');
+    document.querySelector('.p_two').classList.remove('current_player');
+    document.querySelector('.p_two').classList.add('player_label');
+
+    //Changing the player text back to the right text. 
+    document.querySelector('.p_one').innerHTML = "Player One";
+    document.querySelector('.p_two').innerHTML = "Player Two";
+
+})
 
 window.start()
 
