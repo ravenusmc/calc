@@ -8,18 +8,20 @@
 
   <div class='main_container'>
 
-    <input />
+   <!--  <input class='input_screen' /> -->
+    <div class='input_screen'>
+    </div>
     <div class='number_area_one'>
-      <button>
+      <button onClick='seven()' class='seven'>
         7
       </button>
-      <button>
+      <button onClick='eight()' class='eight'>
         8
       </button>
       <button>
         9
       </button>
-      <button>
+      <button id='add_btn'>
         +
       </button>
     </div>
@@ -55,7 +57,7 @@
     </div>
 
     <div class='number_area_four'>
-      <button class='eql_btn'>
+      <button id='eql_btn' class='eql_btn'>
         =
       </button>
       <button>
@@ -64,6 +66,6 @@
     </div>
 
   </div>
-
+  <script type="text/javascript" src='js/calc.js'></script>
 </body>
 </html>
