@@ -37,3 +37,18 @@ button {
   display: flex;
   flex-direction: row;
 }
+
+.number_area_four {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.eql_btn {
+  width: 150px;
+}
+
+input {
+  height: 50px;
+  width: 195px;
+}
