@@ -1,57 +1,99 @@
 //Creating global variables
 var numArray = []
-var nums = []
 var multiply_it, add_it, subtract, divide;
 multiply_it = false;
 add_it = false;
 subtract = false;
 divide = false;
-
 //This array will hold all the numbers each time the user pushes an operand. 
 var numberContainer = [];
 
-//The below functions are for Operands 
+//The below functions are for Operands. Comments below are the same for all operand functions. 
 
+//First listening for the user to click the specific operand button
 document.querySelector('#add_btn').addEventListener('click', function(){
+  //The specific operand used is set to true
   add_it = true
+  //This conditional statement will go through and do the math if the user hit one of the operands. 
+  if (multiply_it){
+    multiply_it = false;
+    displayNum = numArray.join('');
+    displayNum = Number(displayNum);
+    numberContainer.push(displayNum);
+    total = multiply(numberContainer);
+    numberContainer = [];
+    numberContainer.push(total);
+    numArray = [];
+  }
+  //The numbers that are entered in the screen are all joined in an array called displayNum
   displayNum = numArray.join('');
+  //I ensure that the number displayNum is in fact a number
   displayNum = Number(displayNum);
+  //The number is then pushed into a numberContainer array which will hold the values of the numbers
+  //that will haev actions taken on them. 
   numberContainer.push(displayNum);
-
   //clearing out the numArray so that the program does not crash. 
   numArray = [];
 });
 
 document.querySelector('#mul_btn').addEventListener('click', function(){
   multiply_it = true;
-  displayNum = numArray.join('');
-  displayNum = Number(displayNum);
-  numberContainer.push(displayNum);
-  //clearing out the numArray so that the program does not crash. 
-  numArray = [];
+  if (add_it){
+    add_it = false;
+    displayNum = numArray.join('');
+    displayNum = Number(displayNum);
+    numberContainer.push(displayNum);
+    total = add(numberContainer);
+    numberContainer = [];
+    numberContainer.push(total);
+    document.querySelector('.input_screen').textContent = total;
+    numArray = [];
+  }else {
+    displayNum = numArray.join('');
+    displayNum = Number(displayNum);
+    numberContainer.push(displayNum);
+    //clearing out the numArray so that the program does not crash. 
+    numArray = [];
+  }
+
 })
 
+//The actions here cover what happens when the user hits the equal button. 
 document.querySelector('#eql_btn').addEventListener('click', function(){
+  //I again join the numbers that are in the numArray together. 
   displayNum = numArray.join('');
+  //Ensure that displayNum is in fact a number
   displayNum = Number(displayNum);
+  //Push display number into the numberContainer array which will hold all of the numbers which will have 
+  //an action taken on them.
   numberContainer.push(displayNum);
-  if (multiply_it == true){
+  //Here I use the boolean's from each operand action to determine what the program will do when the user 
+  //hits the equal button.
+  if (multiply_it){
+    console.log(numberContainer)
     total = multiply(numberContainer);
-  }else if (add_it == true){
+  }else if (add_it){
     total = add(numberContainer);
   }
+  //The screen presents the total to the user. 
   document.querySelector('.input_screen').textContent = total;
 })
+///////// END OPERAND ACTIONS ////////////////////
+
 
 
 //All the code for the button functions here. I will right comments in the first one but the rest are the same. 
-
 function zero(){
+  //pulling the value that the button represents
   var value = document.querySelector('.zero').textContent;
+  //Ensuring that the value is a number.
   value = Number(value)
+  //pushing that value into the numArray. I do this so that the user may enter multiple values of the same 
+  //number. 
   numArray.push(value);
   //This line of code will display the values on the screen without a comma. 
   displayNum = numArray.join('');
+  //The displayNum is then displayed. 
   document.querySelector('.input_screen').textContent = displayNum;
 }
 
@@ -137,7 +179,6 @@ function nine(){
   document.querySelector('.input_screen').textContent = displayNum;
 }
 
-//Problem each time I click the seven function I fire it off which creates an extra 7.
 
 function add() {
   total = 0
@@ -154,5 +195,18 @@ function multiply() {
   }
   return total;
 }
+
+//Here I clear the screen and reset all of the values.
+document.querySelector('.clear').addEventListener('click', function(){
+  numberContainer = [];
+  numArray = [];
+  multiply_it = false;
+  add_it = false;
+  subtract = false;
+  divide = false;
+  document.querySelector('.input_screen').textContent = '';
+});
+
+
 
 
