@@ -1,12 +1,21 @@
+//NOTE: I use two arrays in this program that do similar things. However, they do not. One array, numArray, is
+//used to simply hold numbers and then display them to the screen. So, when a user hits a button, lets say 7, that
+//number is entered into the array and the value is displayed on the screen. That way, if the user enters 7 and 
+//then another 7 I use join and those two 7's become 77. The numberContainer array is what holds numbers that 
+//will have calculations done on them. 
+
+//Finally, this file has a ton of code that can be refractured. It is VERY VERY WET. However, I am currently sick 
+//of this project and I will clean it out maybe at a later date! For now, the calculator works! 
+
 //Creating global variables
-var numArray = []
+var numArray = [] //This array will hold the numbers and display them on the screen.
 var multiply_it, add_it, subtract_it, divide_it;
 multiply_it = false;
 add_it = false;
 subtract_it = false;
 divide_it = false;
 //This array will hold all the numbers each time the user pushes an operand. 
-var numberContainer = [];
+var numberContainer = []; //This array is what will hold the numbers to do calculations on them. 
 
 //The below functions are for Operands. Comments below are the same for all operand functions. 
 
@@ -16,13 +25,21 @@ document.querySelector('#add_btn').addEventListener('click', function(){
   add_it = true
   //This conditional statement will go through and do the math if the user hit one of the operands. 
   if (multiply_it){
+    //I set the multiply it back to false in case it is hit again in a calculation.
     multiply_it = false;
+    //I am using the join method to combine all the numbers in the array to make one number. 
     displayNum = numArray.join('');
+    //I ensure that the number is a number and now a string from the array. 
     displayNum = Number(displayNum);
+    //push the displayNum in the numberContainer. 
     numberContainer.push(displayNum);
+    //Getting the total of the numbers if multiplied button is hit
     total = multiply(numberContainer);
+    //Clearing out the numberContainer in case the user wants to do more calculations
     numberContainer = [];
+    //Pushing the total into the numberContainer array in case the user wants to do more calculations
     numberContainer.push(total);
+    //Clearing out the numArray. 
     numArray = [];
   }else if (divide_it) {
     divide_it = false;
