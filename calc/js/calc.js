@@ -1,10 +1,10 @@
 //Creating global variables
 var numArray = []
-var multiply_it, add_it, subtract, divide;
+var multiply_it, add_it, subtract_it, divide_it;
 multiply_it = false;
 add_it = false;
-subtract = false;
-divide = false;
+subtract_it = false;
+divide_it = false;
 //This array will hold all the numbers each time the user pushes an operand. 
 var numberContainer = [];
 
@@ -24,16 +24,36 @@ document.querySelector('#add_btn').addEventListener('click', function(){
     numberContainer = [];
     numberContainer.push(total);
     numArray = [];
+  }else if (divide_it) {
+    divide_it = false;
+    displayNum = numArray.join('');
+    displayNum = Number(displayNum);
+    numberContainer.push(displayNum);
+    total = divide(numberContainer);
+    numberContainer = [];
+    numberContainer.push(total);
+    numArray = [];
+  }else if (subtract_it) {
+    subtract_it = false;
+    displayNum = numArray.join('');
+    displayNum = Number(displayNum);
+    numberContainer.push(displayNum);
+    total = subtract(numberContainer);
+    numberContainer = [];
+    numberContainer.push(total);
+    numArray = [];
+  }else {
+    //The numbers that are entered in the screen are all joined in an array called displayNum
+    displayNum = numArray.join('');
+    //I ensure that the number displayNum is in fact a number
+    displayNum = Number(displayNum);
+    //The number is then pushed into a numberContainer array which will hold the values of the numbers
+    //that will haev actions taken on them. 
+    numberContainer.push(displayNum);
+    //clearing out the numArray so that the program does not crash. 
+    numArray = [];
   }
-  //The numbers that are entered in the screen are all joined in an array called displayNum
-  displayNum = numArray.join('');
-  //I ensure that the number displayNum is in fact a number
-  displayNum = Number(displayNum);
-  //The number is then pushed into a numberContainer array which will hold the values of the numbers
-  //that will haev actions taken on them. 
-  numberContainer.push(displayNum);
-  //clearing out the numArray so that the program does not crash. 
-  numArray = [];
+
 });
 
 document.querySelector('#mul_btn').addEventListener('click', function(){
@@ -48,11 +68,105 @@ document.querySelector('#mul_btn').addEventListener('click', function(){
     numberContainer.push(total);
     document.querySelector('.input_screen').textContent = total;
     numArray = [];
+  }else if (divide_it) {
+    divide_it = false;
+    displayNum = numArray.join('');
+    displayNum = Number(displayNum);
+    numberContainer.push(displayNum);
+    total = divide(numberContainer);
+    numberContainer = [];
+    numberContainer.push(total);
+    numArray = [];
+  }else if (subtract_it) {
+    subtract_it = false;
+    displayNum = numArray.join('');
+    displayNum = Number(displayNum);
+    numberContainer.push(displayNum);
+    total = subtract(numberContainer);
+    numberContainer = [];
+    numberContainer.push(total);
+    numArray = [];
   }else {
     displayNum = numArray.join('');
     displayNum = Number(displayNum);
     numberContainer.push(displayNum);
-    //clearing out the numArray so that the program does not crash. 
+    numArray = [];
+  }
+})
+
+document.querySelector('#div_btn').addEventListener('click', function(){
+  divide_it = true;
+  if (add_it){
+    add_it = false;
+    displayNum = numArray.join('');
+    displayNum = Number(displayNum);
+    numberContainer.push(displayNum);
+    total = add(numberContainer);
+    numberContainer = [];
+    numberContainer.push(total);
+    document.querySelector('.input_screen').textContent = total;
+    numArray = [];
+  }else if (multiply_it){
+    multiply_it = false;
+    displayNum = numArray.join('');
+    displayNum = Number(displayNum);
+    numberContainer.push(displayNum);
+    total = multiply(numberContainer);
+    numberContainer = [];
+    numberContainer.push(total);
+    numArray = [];
+  }else if (subtract_it) {
+    subtract_it = false;
+    displayNum = numArray.join('');
+    displayNum = Number(displayNum);
+    numberContainer.push(displayNum);
+    total = subtract(numberContainer);
+    numberContainer = [];
+    numberContainer.push(total);
+    numArray = [];
+  }else{
+    displayNum = numArray.join('');
+    displayNum = Number(displayNum);
+    numberContainer.push(displayNum);
+    numArray = [];
+  }
+
+})
+
+document.querySelector('#sub_btn').addEventListener('click', function(){
+  subtract_it = true;
+  if (add_it){
+    add_it = false;
+    displayNum = numArray.join('');
+    displayNum = Number(displayNum);
+    numberContainer.push(displayNum);
+    total = add(numberContainer);
+    numberContainer = [];
+    numberContainer.push(total);
+    document.querySelector('.input_screen').textContent = total;
+    numArray = [];
+  }else if (multiply_it){
+    multiply_it = false;
+    displayNum = numArray.join('');
+    displayNum = Number(displayNum);
+    numberContainer.push(displayNum);
+    total = multiply(numberContainer);
+    numberContainer = [];
+    numberContainer.push(total);
+    numArray = [];
+  }else if (divide_it) {
+    divide_it = false;
+    displayNum = numArray.join('');
+    displayNum = Number(displayNum);
+    numberContainer.push(displayNum);
+    total = divide(numberContainer);
+    numberContainer = [];
+    numberContainer.push(total);
+    numArray = [];
+  }else{
+    displayNum = numArray.join('');
+    displayNum = Number(displayNum);
+    numberContainer.push(displayNum);
     numArray = [];
   }
 
@@ -74,12 +188,19 @@ document.querySelector('#eql_btn').addEventListener('click', function(){
     total = multiply(numberContainer);
   }else if (add_it){
     total = add(numberContainer);
+  }else if (divide_it){
+    total = divide(numberContainer);
+  }else {
+    total = subtract(numberContainer);
   }
   //The screen presents the total to the user. 
   document.querySelector('.input_screen').textContent = total;
 })
 ///////// END OPERAND ACTIONS ////////////////////
 
+
+
+//////// START OF BUTTON FUNCTIONS //////////////////
 
 
 //All the code for the button functions here. I will right comments in the first one but the rest are the same. 
@@ -186,7 +307,7 @@ function add() {
     total = numberContainer[i] + total; 
   }
   return total;
-}
+};
 
 function multiply() {
   total = 1
@@ -194,6 +315,14 @@ function multiply() {
     total = numberContainer[i] * total; 
   }
   return total;
+};
+
+function divide() {
+  return numberContainer[0] / numberContainer[1];
+};
+
+function subtract() {
+  return numberContainer[0] - numberContainer[1];
 }
 
 //Here I clear the screen and reset all of the values.
@@ -202,8 +331,8 @@ document.querySelector('.clear').addEventListener('click', function(){
   numArray = [];
   multiply_it = false;
   add_it = false;
-  subtract = false;
-  divide = false;
+  subtract_it = false;
+  divide_it = false;
   document.querySelector('.input_screen').textContent = '';
 });
 
