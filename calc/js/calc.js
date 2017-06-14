@@ -19,7 +19,8 @@ var numberContainer = []; //This array is what will hold the numbers to do calcu
 
 //The below functions are for Operands. Comments below are the same for all operand functions. 
 
-//First listening for the user to click the specific operand button
+//First listening for the user to click the specific operand button. I also did not change this function to the 
+//refractured code to show that the code originally looked like. 
 document.querySelector('#add_btn').addEventListener('click', function(){
   //The specific operand used is set to true
   add_it = true
@@ -44,9 +45,6 @@ document.querySelector('#add_btn').addEventListener('click', function(){
   }else if (divide_it) {
     divide_it = false;
     joinPush()
-    // displayNum = numArray.join('');
-    // displayNum = Number(displayNum);
-    // numberContainer.push(displayNum);
     total = divide(numberContainer);
     numberContainer = [];
     numberContainer.push(total);
@@ -54,9 +52,6 @@ document.querySelector('#add_btn').addEventListener('click', function(){
   }else if (subtract_it) {
     subtract_it = false;
     joinPush()
-    // displayNum = numArray.join('');
-    // displayNum = Number(displayNum);
-    // numberContainer.push(displayNum);
     total = subtract(numberContainer);
     numberContainer = [];
     numberContainer.push(total);
@@ -82,24 +77,17 @@ document.querySelector('#mul_btn').addEventListener('click', function(){
     add_it = false;
     joinPush()
     total = add(numberContainer);
-    numberContainer = [];
-    numberContainer.push(total);
-    document.querySelector('.input_screen').textContent = total;
-    numArray = [];
+    clearingArrayToPush();
   }else if (divide_it) {
     divide_it = false;
     joinPush()
     total = divide(numberContainer);
-    numberContainer = [];
-    numberContainer.push(total);
-    numArray = [];
+    clearingArrayToPush();
   }else if (subtract_it) {
     subtract_it = false;
     joinPush()
     total = subtract(numberContainer);
-    numberContainer = [];
-    numberContainer.push(total);
-    numArray = [];
+    clearingArrayToPush();
   }else {
     joinPush()
     numArray = [];
@@ -110,26 +98,19 @@ document.querySelector('#div_btn').addEventListener('click', function(){
   divide_it = true;
   if (add_it){
     add_it = false;
-    joinPush()
+    joinPush();
     total = add(numberContainer);
-    numberContainer = [];
-    numberContainer.push(total);
-    document.querySelector('.input_screen').textContent = total;
-    numArray = [];
+    clearingArrayToPush();
   }else if (multiply_it){
     multiply_it = false;
-    joinPush()
+    joinPush();
     total = multiply(numberContainer);
-    numberContainer = [];
-    numberContainer.push(total);
-    numArray = [];
+    clearingArrayToPush();
   }else if (subtract_it) {
     subtract_it = false;
     joinPush()
     total = subtract(numberContainer);
-    numberContainer = [];
-    numberContainer.push(total);
-    numArray = [];
+    clearingArrayToPush();
   }else{
     joinPush()
     numArray = [];
@@ -143,24 +124,17 @@ document.querySelector('#sub_btn').addEventListener('click', function(){
     add_it = false;
     joinPush()
     total = add(numberContainer);
-    numberContainer = [];
-    numberContainer.push(total);
-    document.querySelector('.input_screen').textContent = total;
-    numArray = [];
+    clearingArrayToPush();
   }else if (multiply_it){
     multiply_it = false;
     joinPush()
     total = multiply(numberContainer);
-    numberContainer = [];
-    numberContainer.push(total);
-    numArray = [];
+    clearingArrayToPush();
   }else if (divide_it) {
     divide_it = false;
     joinPush()
     total = divide(numberContainer);
-    numberContainer = [];
-    numberContainer.push(total);
-    numArray = [];
+    clearingArrayToPush();
   }else{
     joinPush()
     numArray = [];
@@ -199,7 +173,8 @@ document.querySelector('#eql_btn').addEventListener('click', function(){
 //////// START OF BUTTON FUNCTIONS //////////////////
 
 
-//All the code for the button functions here. I will right comments in the first one but the rest are the same. 
+//All the code for the button functions here. I will right comments in the first one but the rest are the same.
+//I have also not changed this first button to show what the button code looked like before it was cleaned up.  
 function zero(){
   //pulling the value that the button represents
   var value = document.querySelector('.zero').textContent;
@@ -216,85 +191,51 @@ function zero(){
 
 function one(){
   var value = document.querySelector('.one').textContent;
-  value = Number(value)
-  numArray.push(value);
-  //This line of code will display the values on the screen without a comma. 
-  displayNum = numArray.join('');
-  document.querySelector('.input_screen').textContent = displayNum;
+  buttonCleanUp(value);
 }
 
 function two(){
   var value = document.querySelector('.two').textContent;
-  value = Number(value)
-  numArray.push(value);
-  //This line of code will display the values on the screen without a comma. 
-  displayNum = numArray.join('');
-  document.querySelector('.input_screen').textContent = displayNum;
+  buttonCleanUp(value);
 }
 
 function three(){
   var value = document.querySelector('.three').textContent;
-  value = Number(value)
-  numArray.push(value);
-  //This line of code will display the values on the screen without a comma. 
-  displayNum = numArray.join('');
-  document.querySelector('.input_screen').textContent = displayNum;
+  buttonCleanUp(value);
 }
 
 function four(){
   var value = document.querySelector('.four').textContent;
-  value = Number(value)
-  numArray.push(value);
-  //This line of code will display the values on the screen without a comma. 
-  displayNum = numArray.join('');
-  document.querySelector('.input_screen').textContent = displayNum;
+  buttonCleanUp(value);
 }
 
 function five(){
   var value = document.querySelector('.five').textContent;
-  value = Number(value)
-  numArray.push(value);
-  //This line of code will display the values on the screen without a comma. 
-  displayNum = numArray.join('');
-  document.querySelector('.input_screen').textContent = displayNum;
+  buttonCleanUp(value);
 }
 
 function six(){
   var value = document.querySelector('.six').textContent;
-  value = Number(value)
-  numArray.push(value);
-  //This line of code will display the values on the screen without a comma. 
-  displayNum = numArray.join('');
-  document.querySelector('.input_screen').textContent = displayNum;
+  buttonCleanUp(value);
 }
 
 
 function seven(){
   var value = document.querySelector('.seven').textContent;
-  value = Number(value)
-  numArray.push(value);
-  //This line of code will display the values on the screen without a comma. 
-  displayNum = numArray.join('');
-  document.querySelector('.input_screen').textContent = displayNum;
+  buttonCleanUp(value);
 }
 
 function eight(){
   var value = document.querySelector('.eight').textContent;
-  value = Number(value)
-  numArray.push(value);
-  //This line of code will display the values on the screen without a comma. 
-  displayNum = numArray.join('');
-  document.querySelector('.input_screen').textContent = displayNum;
+  buttonCleanUp(value);
 }
 
 function nine(){
   var value = document.querySelector('.nine').textContent;
-  value = Number(value)
-  numArray.push(value);
-  //This line of code will display the values on the screen without a comma. 
-  displayNum = numArray.join('');
-  document.querySelector('.input_screen').textContent = displayNum;
+  buttonCleanUp(value);
 }
+
+////// BELOW FUNCTIONS WILL TAKE ACTION ON THE NUMBERS ////////////
 
 
 function add() {
@@ -337,6 +278,20 @@ function joinPush(){
     displayNum = numArray.join('');
     displayNum = Number(displayNum);
     numberContainer.push(displayNum);
+}
+
+function clearingArrayToPush(){
+    numberContainer = [];
+    numberContainer.push(total);
+    document.querySelector('.input_screen').textContent = total;
+    numArray = [];
+}
+
+function buttonCleanUp(value){
+  value = Number(value)
+  numArray.push(value);
+  displayNum = numArray.join('');
+  document.querySelector('.input_screen').textContent = displayNum;
 }
 
 
