@@ -43,30 +43,33 @@ document.querySelector('#add_btn').addEventListener('click', function(){
     numArray = [];
   }else if (divide_it) {
     divide_it = false;
-    displayNum = numArray.join('');
-    displayNum = Number(displayNum);
-    numberContainer.push(displayNum);
+    joinPush()
+    // displayNum = numArray.join('');
+    // displayNum = Number(displayNum);
+    // numberContainer.push(displayNum);
     total = divide(numberContainer);
     numberContainer = [];
     numberContainer.push(total);
     numArray = [];
   }else if (subtract_it) {
     subtract_it = false;
-    displayNum = numArray.join('');
-    displayNum = Number(displayNum);
-    numberContainer.push(displayNum);
+    joinPush()
+    // displayNum = numArray.join('');
+    // displayNum = Number(displayNum);
+    // numberContainer.push(displayNum);
     total = subtract(numberContainer);
     numberContainer = [];
     numberContainer.push(total);
     numArray = [];
   }else {
+    joinPush()
     //The numbers that are entered in the screen are all joined in an array called displayNum
-    displayNum = numArray.join('');
+    //displayNum = numArray.join('');
     //I ensure that the number displayNum is in fact a number
-    displayNum = Number(displayNum);
+    //displayNum = Number(displayNum);
     //The number is then pushed into a numberContainer array which will hold the values of the numbers
     //that will haev actions taken on them. 
-    numberContainer.push(displayNum);
+    //numberContainer.push(displayNum);
     //clearing out the numArray so that the program does not crash. 
     numArray = [];
   }
@@ -77,9 +80,7 @@ document.querySelector('#mul_btn').addEventListener('click', function(){
   multiply_it = true;
   if (add_it){
     add_it = false;
-    displayNum = numArray.join('');
-    displayNum = Number(displayNum);
-    numberContainer.push(displayNum);
+    joinPush()
     total = add(numberContainer);
     numberContainer = [];
     numberContainer.push(total);
@@ -87,26 +88,20 @@ document.querySelector('#mul_btn').addEventListener('click', function(){
     numArray = [];
   }else if (divide_it) {
     divide_it = false;
-    displayNum = numArray.join('');
-    displayNum = Number(displayNum);
-    numberContainer.push(displayNum);
+    joinPush()
     total = divide(numberContainer);
     numberContainer = [];
     numberContainer.push(total);
     numArray = [];
   }else if (subtract_it) {
     subtract_it = false;
-    displayNum = numArray.join('');
-    displayNum = Number(displayNum);
-    numberContainer.push(displayNum);
+    joinPush()
     total = subtract(numberContainer);
     numberContainer = [];
     numberContainer.push(total);
     numArray = [];
   }else {
-    displayNum = numArray.join('');
-    displayNum = Number(displayNum);
-    numberContainer.push(displayNum);
+    joinPush()
     numArray = [];
   }
 })
@@ -115,9 +110,7 @@ document.querySelector('#div_btn').addEventListener('click', function(){
   divide_it = true;
   if (add_it){
     add_it = false;
-    displayNum = numArray.join('');
-    displayNum = Number(displayNum);
-    numberContainer.push(displayNum);
+    joinPush()
     total = add(numberContainer);
     numberContainer = [];
     numberContainer.push(total);
@@ -125,26 +118,20 @@ document.querySelector('#div_btn').addEventListener('click', function(){
     numArray = [];
   }else if (multiply_it){
     multiply_it = false;
-    displayNum = numArray.join('');
-    displayNum = Number(displayNum);
-    numberContainer.push(displayNum);
+    joinPush()
     total = multiply(numberContainer);
     numberContainer = [];
     numberContainer.push(total);
     numArray = [];
   }else if (subtract_it) {
     subtract_it = false;
-    displayNum = numArray.join('');
-    displayNum = Number(displayNum);
-    numberContainer.push(displayNum);
+    joinPush()
     total = subtract(numberContainer);
     numberContainer = [];
     numberContainer.push(total);
     numArray = [];
   }else{
-    displayNum = numArray.join('');
-    displayNum = Number(displayNum);
-    numberContainer.push(displayNum);
+    joinPush()
     numArray = [];
   }
 
@@ -154,9 +141,7 @@ document.querySelector('#sub_btn').addEventListener('click', function(){
   subtract_it = true;
   if (add_it){
     add_it = false;
-    displayNum = numArray.join('');
-    displayNum = Number(displayNum);
-    numberContainer.push(displayNum);
+    joinPush()
     total = add(numberContainer);
     numberContainer = [];
     numberContainer.push(total);
@@ -164,26 +149,20 @@ document.querySelector('#sub_btn').addEventListener('click', function(){
     numArray = [];
   }else if (multiply_it){
     multiply_it = false;
-    displayNum = numArray.join('');
-    displayNum = Number(displayNum);
-    numberContainer.push(displayNum);
+    joinPush()
     total = multiply(numberContainer);
     numberContainer = [];
     numberContainer.push(total);
     numArray = [];
   }else if (divide_it) {
     divide_it = false;
-    displayNum = numArray.join('');
-    displayNum = Number(displayNum);
-    numberContainer.push(displayNum);
+    joinPush()
     total = divide(numberContainer);
     numberContainer = [];
     numberContainer.push(total);
     numArray = [];
   }else{
-    displayNum = numArray.join('');
-    displayNum = Number(displayNum);
-    numberContainer.push(displayNum);
+    joinPush()
     numArray = [];
   }
 
@@ -353,6 +332,12 @@ document.querySelector('.clear').addEventListener('click', function(){
   document.querySelector('.input_screen').textContent = '';
 });
 
+
+function joinPush(){
+    displayNum = numArray.join('');
+    displayNum = Number(displayNum);
+    numberContainer.push(displayNum);
+}
 
 
 
