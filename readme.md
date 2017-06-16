@@ -30,8 +30,8 @@ See the Installing instructions above.
 
 # Preview
 
-To see a video that talks about this project please go here: Coming Soon
+To see a video that talks about this project please go here: https://www.youtube.com/watch?v=X3YVk7W_GxE&feature=em-upload_owner
 
-Blog entry: Coming Soon
+Blog entry: https://codingsaga.wordpress.com/
 
 Web Site: http://mcuddy12.info/?nr=0
