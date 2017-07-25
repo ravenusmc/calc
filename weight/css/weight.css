@@ -1,0 +1,46 @@
+/* CSS for the weight app. */
+
+body {
+  background-image: url(https://source.unsplash.com/5IsdIqwwNP4);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+}
+
+.center {
+  text-align: center;
+}
+
+.page_title {
+  background-color: rgba(50,175,255,0.8);
+  text-transform: uppercase;
+  font-family: serif;
+  color: white;
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.main_container {
+  margin: auto;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding: 10px;
+  background-color: rgba(50,175,255,0.8);
+  border-radius: 10px;
+}
+
+.title {
+  text-align: center;
+  color: white;
+}
+
+.paragraph {
+  color: white;
+
+}
