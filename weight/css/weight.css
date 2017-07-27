@@ -1,11 +1,18 @@
 /* CSS for the weight app. */
 
 body {
-  background-image: url(https://source.unsplash.com/gWerBZuKM9c);
+  background-image: url(https://source.unsplash.com/JNPvv1u8yRg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 600px;
+}
+
+button {
+  background-color: orange;
+  border: 2px solid orange;
+  border-radius: 8px;
+  padding: 10px;
 }
 
 .center {
@@ -30,6 +37,7 @@ body {
   width: 50%;
   display: grid;
   grid-template-columns: 40% 60%;
+  grid-row-gap: 20px;
   padding: 10px;
   background-color: rgba(50,175,255,0.8);
   border-radius: 10px;
@@ -46,7 +54,13 @@ body {
 }
 
 .container {
+  margin: auto;
+  width: 50%;
   padding: 10px;
   background-color: rgba(50,175,255,0.8);
   border-radius: 10px;
+}
+
+.test {
+  display: inline;
 }
