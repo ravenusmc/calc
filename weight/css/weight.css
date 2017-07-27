@@ -1,7 +1,7 @@
 /* CSS for the weight app. */
 
 body {
-  background-image: url(https://source.unsplash.com/5IsdIqwwNP4);
+  background-image: url(https://source.unsplash.com/gWerBZuKM9c);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,6 +33,7 @@ body {
   padding: 10px;
   background-color: rgba(50,175,255,0.8);
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .title {
@@ -42,5 +43,10 @@ body {
 
 .paragraph {
   color: white;
+}
 
+.container {
+  padding: 10px;
+  background-color: rgba(50,175,255,0.8);
+  border-radius: 10px;
 }
