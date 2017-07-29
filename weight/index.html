@@ -22,12 +22,13 @@
       pounds or kilograms.</p>
   </div>
 
-  <div class='container'>
-    <label>Weight (lbs): </label><input id='weight'>
+  <div class='input_container'>
+    <label>Weight (lbs): </label>&nbsp;<input size=10 id='weight'>&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="weight_type" id="lbs">Lbs&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="weight_type" id="kgs">Kgs&nbsp;&nbsp;&nbsp;
     <button id='weight_value'>Submit</button>
   </div>
-  <br>
-  <div class='container'>
+  <div class='results_container'>
     <div>
     <h1 >Results: <span id='results_area'></span></h1>
     </div>
