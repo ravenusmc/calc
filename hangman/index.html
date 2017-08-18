@@ -19,16 +19,26 @@
       <h2 class='center font'>Don't let him hang!</h2>
     </div>
 
-    <div>
+    <div class='value_area'>
       <h2 class='center font'>Type in a Letter</h2>
-      <label>Guess:<input></label>
+      <form>
+        <label>Guess: <input type='text' id='guessValue' name='guess'></label>
+        <button onclick='getValue();return false;' id='enteredValue'>Enter!</button>
+      </form>
     </div>
 
-    <div>
+    <div class='userArea'>
       <h2 class='center font'>Used Letters</h2>
+      <table>
+        <tr><td id='one'></td><td id='two'></td><td>three</td><td>four</td><td>five</td></tr>
+        <tr><td>one</td><td>two</td><td>three</td><td>four</td><td>five</td></tr>
+        <tr><td>one</td><td>two</td><td>three</td><td>four</td><td>five</td></tr>
+        <tr><td>one</td><td>two</td><td>three</td><td>four</td><td>five</td></tr>
+      </table>
     </div>
 
   </main>
 
+<script type="text/javascript" src='js/index.js'></script>
 </body>
 </html>
