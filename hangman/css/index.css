@@ -3,3 +3,36 @@
 .center {
   text-align: center
 }
+
+.font {
+  font-family: Courier;
+}
+
+/* CSS for the web Page */
+
+body {
+  background-color: #648ed1;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+main > div {
+  border: 2px solid green;
+  height: 500px;
+  width: 400px;
+}
+
+.noose_area {
+  background-image: url('../img/noose.jpg');
+}
+
+h2 {
+  margin-top: -2px;
+}
