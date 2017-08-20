@@ -50,7 +50,10 @@ main > div {
 /* CSS for Noose Area */
 
 .noose_area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   background-image: url('../img/noose.jpg');
+  width: 600px;
 }
 
 h2 {

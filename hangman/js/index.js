@@ -3,7 +3,10 @@
 //Global variables for use in the program. 
 var gameStart = false;
 var word; 
-var wrong_count = 0; 
+var wrong_count = 0;
+var right_count = 0; 
+var wordLength  = 0;
+var wordCount = 0;
 
 //This function will start the game and choose a word at random. 
 function chooseWord(){
@@ -15,6 +18,8 @@ function chooseWord(){
   alert('Game Started! Word Choosen! Save the man!');
 
   word = wordList[random_value];
+
+  wordCount = word.length;
 
   //This variable will ensure that the user starts the game.
   gameStart = true;
@@ -30,34 +35,29 @@ function reset(){
 function getValue(word){
 
   if (gameStart){
+
     alert(word)
-    //This array will hold all of the positions for where a letter will appear
+
+    //These array's will hold all of the positions for where a letter will appear
     //When it is the wrong answer. The wrong_count will increment by one 
     wrong = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+    right = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten' ];
 
     let target = document.querySelector('#guessValue').value;
 
     if (word.includes(target)){
-      alert('That is in the word!');
-      document.getElementById("one_correct").innerHTML = target;
+      alert('Right Guess!');
+      document.getElementById(right[right_count] + "_correct").innerHTML = target;
+      right_count += 1;
     }else {
-      alert('Wrong Guess')
+      alert('Wrong Guess!')
       document.getElementById(wrong[wrong_count]).innerHTML = target;
       wrong_count += 1;
+      wordLength += 1;
     }
   }else {
     alert('You must hit game start button!');
   }
-
-
-
-
-  // debugger;
-  // if (target != 'a'){
-  //   document.getElementById("one").innerHTML = target;
-  // }else if (target != 'b'){
-  //   document.getElementById("two").innerHTML = target;
-  // }
   
 }
 
@@ -81,4 +81,11 @@ function getValue(word){
 //   count += 1;
 
 // })
+
+  // debugger;
+  // if (target != 'a'){
+  //   document.getElementById("one").innerHTML = target;
+  // }else if (target != 'b'){
+  //   document.getElementById("two").innerHTML = target;
+  // }
 
