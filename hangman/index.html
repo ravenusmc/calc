@@ -11,6 +11,8 @@
   <header class='center font'>
     <h1>Hang Man</h1>
     <h3>Can you save him?</h3>
+    <button onclick='chooseWord();' class='start_button'>Start</button>
+    <button class='reset_button'>Reset</button>
   </header>
 
   <main>
@@ -23,17 +25,26 @@
       <h2 class='center font'>Type in a Letter</h2>
       <form>
         <label>Guess: <input type='text' id='guessValue' name='guess'></label>
-        <button onclick='getValue();return false;' id='enteredValue'>Enter!</button>
+        <button onclick='getValue(word);return false;' id='enteredValue'>Enter!</button>
       </form>
+      <div>
+        <h2 class='center font'>Correct Letters:</h2>
+        <table>
+          <tr><td id='one_correct'></td><td id='two_correct'></td><td>three</td><td>four</td><td>five</td></tr>
+          <tr><td>one</td><td>two</td><td>three</td><td>four</td><td>five</td></tr>
+          <tr><td>one</td><td>two</td><td>three</td><td>four</td><td>five</td></tr>
+          <tr><td>one</td><td>two</td><td>three</td><td>four</td><td>five</td></tr>
+        </table>
+      </div>
     </div>
 
     <div class='userArea'>
       <h2 class='center font'>Used Letters</h2>
       <table>
-        <tr><td id='one'></td><td id='two'></td><td>three</td><td>four</td><td>five</td></tr>
-        <tr><td>one</td><td>two</td><td>three</td><td>four</td><td>five</td></tr>
-        <tr><td>one</td><td>two</td><td>three</td><td>four</td><td>five</td></tr>
-        <tr><td>one</td><td>two</td><td>three</td><td>four</td><td>five</td></tr>
+        <tr><td id='one'>99</td><td id='two'>99</td><td id='three'>99</td><td id='four'>99</td><td id='five'>99</td></tr>
+        <tr><td id='six'>99</td><td id='seven'>99</td><td id='eight'>99</td><td id='nine'>99</td><td id='ten'>99</td></tr>
+        <tr><td id='eleven'>99</td><td id='twelve'>99</td><td id='thirteen'>99</td><td id='fourteen'>99</td><td id='fifteen'>99</td></tr>
+        <tr><td id='sixteen'>99</td><td id='seventeen'>99</td><td id='eightteen'>99</td><td id='nineteen'>99</td><td id='twenty'>99</td></tr>
       </table>
     </div>
 

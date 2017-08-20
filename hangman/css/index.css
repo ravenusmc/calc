@@ -8,6 +8,24 @@
   font-family: Courier;
 }
 
+.start_button {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #189b2c;
+  border-color: #189b2c;
+  border-radius: 8px;
+  color: A71A62;
+  font-size: 30px;
+}
+
+.reset_button {
+  padding: 10px;
+  background-color: yellow;
+  border-color: yellow;
+  border-radius: 8px;
+  font-size: 30px;
+}
+
 /* CSS for the web Page */
 
 body {
