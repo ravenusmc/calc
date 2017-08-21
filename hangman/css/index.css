@@ -52,12 +52,20 @@ main > div {
 .noose_area {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   background-image: url('../img/noose.jpg');
   width: 600px;
 }
 
 h2 {
   margin-top: -2px;
+}
+
+img {
+  width: 120px;
+  height: 75px;
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 
 /* CSS for value area */
