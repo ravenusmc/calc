@@ -9,7 +9,7 @@
 <body>
 
   <header class='center font'>
-    <h1>Hang Man</h1>
+    <h1 class='main_title'>Hang Man</h1>
     <h3>Can you save him?</h3>
     <button onclick='chooseWord();' class='start_button'>Start</button>
     <button onclick='reset();' class='reset_button'>Reset</button>
@@ -19,12 +19,12 @@
 
     <div class='noose_area'>
 <!--       <h2 class='center font'>Don't let him hang!</h2> -->
-      <img class='head' src="img/head.jpg">
-      <img class='body' src='img/body.jpg'>
-      <img class='l_arm' src='img/left_arm.jpg'>
-      <img class='r_arm' src='img/right_arm.jpg'>
-      <img class='r_leg' src='img/right_leg.jpg'>
-      <img class='l_leg' src='img/left_leg.jpg'>
+      <img id='head'  class='head' src="img/head.jpg">
+      <img id='body'  class='body' src='img/body.jpg'>
+      <img id='l_arm' class='l_arm' src='img/left_arm.jpg'>
+      <img id='r_arm' class='r_arm' src='img/right_arm.jpg'>
+      <img id='r_leg' class='r_leg' src='img/right_leg.jpg'>
+      <img id='l_leg' class='l_leg' src='img/left_leg.jpg'>
     </div>
 
     <div class='value_area'>
@@ -35,22 +35,32 @@
       </form>
       <div>
         <h2 class='center font'>Correct Letters:</h2>
+
         <table>
-          <tr><td id='one_correct'>99</td><td id='two_correct'>99</td><td id='three_correct'>99</td><td id='four_correct'>99</td><td id='five_correct'>99</td></tr>
-          <tr><td id='six_correct'>99</td><td id='seven_correct'>99</td><td id='eight_correct'>99</td><td id='nine_correct'>99</td><td id='ten_correct'>99</td></tr>
-          <tr><td id='eleven_correct'>99</td><td id='twelve_correct'>99</td><td id='thirteen_correct'>99</td><td id='fourteen_correct'>99</td><td id='fifteen_correct'>99</td></tr>
-          <tr><td id='sixteen_correct'>99</td><td id='seventeen_correct'>99</td><td id='eighteen_correct'>99</td><td id='nineteen_correct'>99</td><td id='twenty_correct'>99</td></tr>
+          <tr>
+            <td id='one_correct'>99</td>
+            <td id='two_correct'>99</td>
+            <td id='three_correct'>99</td>
+            <td id='four_correct'>99</td>
+            <td id='five_correct'>99</td>
+            <td id='six_correct'>99</td>
+          </tr>
         </table>
+
       </div>
     </div>
 
     <div class='userArea'>
       <h2 class='center font'>Used Letters:</h2>
       <table>
-        <tr><td id='one'>99</td><td id='two'>99</td><td id='three'>99</td><td id='four'>99</td><td id='five'>99</td></tr>
-        <tr><td id='six'>99</td><td id='seven'>99</td><td id='eight'>99</td><td id='nine'>99</td><td id='ten'>99</td></tr>
-        <tr><td id='eleven'>99</td><td id='twelve'>99</td><td id='thirteen'>99</td><td id='fourteen'>99</td><td id='fifteen'>99</td></tr>
-        <tr><td id='sixteen'>99</td><td id='seventeen'>99</td><td id='eightteen'>99</td><td id='nineteen'>99</td><td id='twenty'>99</td></tr>
+        <tr>
+          <td id='one'>99</td>
+          <td id='two'>99</td>
+          <td id='three'>99</td>
+          <td id='four'>99</td>
+          <td id='five'>99</td>
+          <td id='six'>99</td>
+        </tr>
       </table>
     </div>
 
