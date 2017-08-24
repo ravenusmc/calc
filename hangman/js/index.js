@@ -28,25 +28,16 @@ function chooseWord(){
   //I am only showing the word in production mode. 
   // alert(word)
 
-  //DON'T BELIEVE I NEED THIS LINE BECAUSE ALL MY WORDS ARE THE SAME LENGTH. 
-  // wordCount = word.length;
-
   //This variable will ensure that the user starts the game.
   gameStart = true;
 }
-
-//This function will reset the game if clicked.
-function reset(){
-  //This code will reload the page. That is how my reset button works! 
-  location.reload();
-}
-
 
 //This function will control what the user enters into the program. 
 function getValue(word){
 
   if (gameStart){
 
+    //I take the main word and put it into an array using the split method. 
     wordArray = word.split("");
 
     //These array's will hold all of the positions for where a letter will appear
@@ -78,8 +69,6 @@ function getValue(word){
           document.getElementById(right[i] + "_correct").innerHTML = target;
         }
       }
-      
-      //right_count += 1;
 
     }else {
       alert('Wrong Guess!')
@@ -93,11 +82,28 @@ function getValue(word){
         document.getElementById('used_word_area').setAttribute("style", "background-color: pink;");
       }
       bodyPartCount += 1;
+      //Calling the function to alert the user that they lost. 
+      lose(bodyPartCount);
     }
   }else {
     alert('You must hit game start button!');
   }
-  
+}
+
+/////// FUNCTIONS TO HELP OUT THE MAIN CODE HERE ////////////
+
+//This function will reset the game if clicked.
+function reset(){
+  //This code will reload the page. That is how my reset button works! 
+  location.reload();
+}
+
+//This function will alert the player that they lost. 
+function lose(bodyPartCount){
+  if (bodyPartCount == 6){
+    alert('You Lose!');
+    location.reload();
+  }
 }
 
 
