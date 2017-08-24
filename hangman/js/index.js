@@ -26,7 +26,7 @@ function chooseWord(){
   word = wordList[random_value];
 
   //I am only showing the word in production mode. 
-  alert(word)
+  // alert(word)
 
   //DON'T BELIEVE I NEED THIS LINE BECAUSE ALL MY WORDS ARE THE SAME LENGTH. 
   // wordCount = word.length;

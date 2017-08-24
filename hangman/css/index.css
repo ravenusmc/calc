@@ -67,9 +67,8 @@ main > div {
 
 footer {
   text-align: center;
-  border-top: 3px solid white;
-/*  background-color: #648ed1;*/
-  margin-top: -3px;
+  border-top: 3px solid black;
+  margin-top: 10px;
   padding-top: 10px;
 }
 
@@ -80,8 +79,10 @@ footer {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   background-image: url('../img/noose.jpg');
-  opacity: 0.3;
+  opacity: 0.5;
   width: 600px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
 }
 
 h2 {
