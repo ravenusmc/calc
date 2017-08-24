@@ -12,8 +12,10 @@
   <header class='center font'>
     <h1 class='main_title'>Hang Man</h1>
     <h3 class='sub_title'>Can you save him?</h3>
-    <button onclick='chooseWord();' class='start_button'>Start</button>
-    <button onclick='reset();' class='reset_button'>Reset</button>
+    <div class='button_div'>
+      <button onclick='chooseWord();' class='start_button'>Start</button>
+      <button onclick='reset();' class='reset_button'>Reset</button>
+    </div>
   </header>
 
   <main>
@@ -34,7 +36,7 @@
         <button onclick='getValue(word);return false;' id='enteredValue'>Enter!</button>
       </form>
       <div>
-        <h2 class='center font'>Correct Letters:</h2>
+        <h2 class='corrent_title center font'>Correct Letters:</h2>
 
         <table>
           <tr>
@@ -50,7 +52,7 @@
       </div>
     </div>
 
-    <div class='userArea'>
+    <div id='used_word_area' class='userArea'>
       <h2 class='center font'>Used Letters:</h2>
       <table>
         <tr>

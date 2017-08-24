@@ -5,9 +5,9 @@ var gameStart = false;
 var word; 
 var wrong_count = 0;
 var right_count = 0; 
-var wordLength  = 0;
-var wordCount = 6;
 var bodyPartCount = 0;
+var wordCount = 6;
+
 
 //This function will start the game and choose a word at random. 
 function chooseWord(){
@@ -63,12 +63,6 @@ function getValue(word){
     let target = document.querySelector('#guessValue').value;
     type = typeof target
 
-    if (type != string){
-      alert('Nay');
-    }
-
-
-
     if (word.includes(target)){
 
       //Here I just let the user know that they guessed a right letter. 
@@ -93,8 +87,12 @@ function getValue(word){
       //This line I make one of the body parts appear on the screen. 
       document.getElementById(bodyParts[bodyPartCount]).setAttribute("style", "display: inline;");
       wrong_count += 1;
-      wordLength += 1;
-      bodyPartCount += 1; 
+      if (wrong_count >= 2 && wrong_count < 4){
+        document.getElementById('used_word_area').setAttribute("style", "background-color: yellow;");
+      }else if (wrong_count >= 4){
+        document.getElementById('used_word_area').setAttribute("style", "background-color: pink;");
+      }
+      bodyPartCount += 1;
     }
   }else {
     alert('You must hit game start button!');
