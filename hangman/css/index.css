@@ -37,10 +37,14 @@ body {
   font-size: 65px;
 }
 
+.sub_title {
+  margin-top: -25px;
+  font-size: 50px;
+}
+
 main {
   display: flex;
   flex-direction: row;
-  margin-bottom: 100px;
 }
 
 main > div {
@@ -48,6 +52,13 @@ main > div {
   height: 500px;
   width: 400px;
 }
+
+footer {
+  text-align: center;
+  border-top: 3px solid white;
+}
+
+
 
 /* CSS for Noose Area */
 

@@ -22,8 +22,6 @@ function chooseWord(){
   //This variable here will be what will choose a random value from the wordList array.
   random_value = Math.floor((Math.random() * 6) + 1);
 
-  alert(random_value);
-
   //I am using the random_value to pull a word out of the array. 
   word = wordList[random_value];
 
@@ -63,6 +61,13 @@ function getValue(word){
 
     //This is getting the value that the user enters. 
     let target = document.querySelector('#guessValue').value;
+    type = typeof target
+
+    if (type != string){
+      alert('Nay');
+    }
+
+
 
     if (word.includes(target)){
 
