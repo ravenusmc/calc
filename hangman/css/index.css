@@ -28,8 +28,14 @@
 
 /* CSS for the web Page */
 
+body {
+  background-image: url(https://source.unsplash.com/hpX5-me5Lug);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 header {
-  background-color: #648ed1;
   padding-top: 2px;
   padding-bottom: 2px;
 }
@@ -62,7 +68,7 @@ main > div {
 footer {
   text-align: center;
   border-top: 3px solid white;
-  background-color: #648ed1;
+/*  background-color: #648ed1;*/
   margin-top: -3px;
   padding-top: 10px;
 }
@@ -74,6 +80,7 @@ footer {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   background-image: url('../img/noose.jpg');
+  opacity: 0.3;
   width: 600px;
 }
 
@@ -90,7 +97,6 @@ h2 {
   grid-row: 2/3;
   align-items: center;
   justify-content: center;
-/*  display: inline;*/
 }
 
 .body {
@@ -141,7 +147,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #648ed1;
+  background-color: rgba(255,255,255,0.3);
 }
 
 .corrent_title {
@@ -155,7 +161,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 600px;
+  background-color: rgba(255,255,255,0.3);
 }
 
 table {
