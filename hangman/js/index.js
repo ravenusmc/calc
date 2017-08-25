@@ -53,7 +53,6 @@ function getValue(word){
 
     //This is getting the value that the user enters. 
     let target = document.querySelector('#guessValue').value;
-    type = typeof target;
 
     //Conditional statement to determine when the character made a right or wrong choice. 
     if (word.includes(target)){
@@ -96,7 +95,6 @@ function getValue(word){
   }
 }
 
-
 /////// FUNCTIONS TO HELP OUT THE MAIN CODE HERE ////////////
 
 //This function will reset the game if clicked.
@@ -124,7 +122,6 @@ function correctGuess(target, wordArray, right, right_count){
   }
   return right_count;
 }
-
 
 //This function will tell the player that they won. 
 function win(right_count, word){
