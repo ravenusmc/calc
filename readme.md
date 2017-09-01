@@ -35,3 +35,7 @@ To see a video that talks about this project please go here: https://www.youtube
 Blog entry: https://codingsaga.wordpress.com/
 
 Web Site: http://mcuddy12.info/?nr=0
+
+Video on Hangman: https://www.youtube.com/watch?v=cH0Hg0H1VjU
+
+Blog entry on Hangman: https://codingsaga.wordpress.com/2017/09/01/hangman/

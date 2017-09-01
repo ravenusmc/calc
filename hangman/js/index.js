@@ -25,7 +25,7 @@ function chooseWord(){
   word = wordList[random_value];
 
   //I am only showing the word in production mode. 
-  alert(word)
+  // alert(word)
 
   //This variable will ensure that the user starts the game.
   gameStart = true;
