@@ -1,0 +1,48 @@
+/******************************
+This file will contain all the CSS code for 
+the mole game 
+*******************************/
+
+/******************************
+Generic CSS for entire page
+*******************************/
+
+body, html {
+  height: 100%;
+}
+
+body {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.center {
+  text-align: center;
+}
+
+/******************************
+CSS for sections of the page
+*******************************/
+
+#title_section {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/******************************
+CSS for the footer
+*******************************/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
