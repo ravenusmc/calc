@@ -47,10 +47,13 @@ CSS for game area section
   grid-template-rows: repeat(2, auto);
 }
 
-div {
-  border: 2px solid green;
+#one, #two, #three, #four, #five, #six {
+  background-image: url('../images/mole_in_hole.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
 }
-
 
 
 
