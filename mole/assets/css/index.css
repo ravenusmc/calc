@@ -55,6 +55,14 @@ CSS for game area section
 }
 
 #one, #two, #three, #four, #five, #six {
+/*  background-image: url('../images/mole_in_hole.jpg');*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+}
+
+.down {
   background-image: url('../images/mole_in_hole.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -62,6 +70,13 @@ CSS for game area section
   height: 250px;
 }
 
+.up {
+  background-image: url('../images/mole_out.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+}
 
 
 /******************************
