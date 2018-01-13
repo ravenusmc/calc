@@ -24,6 +24,13 @@ body {
   text-align: center;
 }
 
+button {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: orange;
+  border-color: orange;
+}
+
 /******************************
 CSS for header section
 *******************************/
