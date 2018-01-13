@@ -1,69 +1,122 @@
+//This file holds all of the javascript code for the project. 
 
-function change(){
+//This function will get the random numbers 
+function getPosition(positions) {
+  let position = '';
 
+  let randomNumber = Math.floor(Math.random() * 6);
 
-  let target = document.getElementById("one");
+  position = positions[randomNumber];
 
-
-  if (document.getElementById("one").classList.contains('down') ){
-    document.getElementById("one").classList.remove('down');
-    document.getElementById("one").classList.add('up');
-  }else {
-    document.getElementById("one").classList.remove('up');
-    document.getElementById("one").classList.add('down');
-  }
-
-
-  
+  return position;
 }
 
+//This function will make the moles appear up and down. 
+function change(){
+
+  let position = '';
+
+  const positions = ['one', 'two', 'three', 'four', 'five', 'six'];
+
+  position = getPosition(positions);
+
+  if (document.getElementById(position).classList.contains('down') ){
+    document.getElementById(position).classList.remove('down');
+    document.getElementById(position).classList.add('up');
+  }else {
+    document.getElementById(position).classList.remove('up');
+    document.getElementById(position).classList.add('down');
+  }
+
+}
+
+//This function starts the game when the button is pressed. 
 function switchPic(){ 
 
   setInterval(function(){
     change();
-  }, 1000);
+  }, 200);
 
 };
 
-//This function will repeat 
-// setInterval(function(){ alert("Hello"); }, 3000);
 
+//The functions below all deal with updating the score. I will say that I should have used a 
+//Global variable to get the positions value out of the array. That way, I would not have had to 
+//create so many functions! This is a very bad example of WET code!!!! 
+function hitOne() {
+  debugger;
+  let score = Number(document.getElementById('score').innerHTML);
 
+  if(document.getElementById("one").className == "up"){
 
-// function changeTwo() {
+    score += 1;
+    document.getElementById('score').innerHTML = score;
+    document.getElementById("one").classList.remove('up');
+    document.getElementById("one").classList.add('down');
+  } 
+}
 
-//   let targetTwo = document.getElementById('two');
+function hitTwo() {
 
-//   if (targetTwo.style.color == 'black'){
-//     document.getElementById('two').src = 'https://source.unsplash.com/AZMmUy2qL6A/255x200';
-//     document.getElementById('headingTwo').innerHTML = 'A Group of Friends';
-//     targetTwo.style.color = 'blue';
-//   }else{
-//     document.getElementById('two').src = "https://source.unsplash.com/K2u71wv2eI4/255x200";
-//     document.getElementById('headingTwo').innerHTML = 'A Lone individual...';
-//     targetTwo.style.color = 'black';
-//   }
-// }
+  let score = Number(document.getElementById('score').innerHTML);
 
-// <div class="card">
-//   <img id='two' onclick='changeTwo()' style="color:black;" class="card-img-top" src="https://source.unsplash.com/K2u71wv2eI4/255x200" alt="Card image cap">
-//     <div class="card-block">
-//       <h4 id='headingTwo' class="card-title">A Lone individual...</h4>
-//       <p id="two-paragraph"class="card-text">He who wonders about his journey in life...</p>
-//     </div>
-// </div>
+  if(document.getElementById("two").className == "up"){
 
+    score += 1;
+    document.getElementById('score').innerHTML = score;
+    document.getElementById("two").classList.remove('up');
+    document.getElementById("two").classList.add('down');
+  } 
+}
 
-  // if (target.style.backgroundImage = "url('./assets/images/mole_in_hole')" ){
-  //   document.getElementById("one").style.backgroundImage = "url('./assets/images/mole_out.jpg')";
-  //   target.style.color = 'green';
-  // }else {
-  //   document.getElementById("one").style.backgroundImage = "url('./assets/images/mole_in_hole.jpg')";
-  //   target.style.color = 'red';
-  // }
+function hitThree() {
 
-    if (target.style.backgroundImage == "url(assets/images/mole_in_hole.jpg)" ){
-    document.getElementById("one").style.backgroundImage = "url(assets/images/mole_in_hole.jpg)";
-  }else {
-    document.getElementById("one").style.backgroundImage = "url(assets/images/mole_out.jpg)";
-  }
+  let score = Number(document.getElementById('score').innerHTML);
+
+  if(document.getElementById("three").className == "up"){
+
+    score += 1;
+    document.getElementById('score').innerHTML = score;
+    document.getElementById("three").classList.remove('up');
+    document.getElementById("three").classList.add('down');
+  } 
+}
+
+function hitFour() {
+
+  let score = Number(document.getElementById('score').innerHTML);
+
+  if(document.getElementById("four").className == "up"){
+
+    score += 1;
+    document.getElementById('score').innerHTML = score;
+    document.getElementById("four").classList.remove('up');
+    document.getElementById("four").classList.add('down');
+  } 
+}
+
+function hitFive() {
+
+  let score = Number(document.getElementById('score').innerHTML);
+
+  if(document.getElementById("five").className == "up"){
+
+    score += 1;
+    document.getElementById('score').innerHTML = score;
+    document.getElementById("five").classList.remove('up');
+    document.getElementById("five").classList.add('down');
+  } 
+}
+
+function hitSix() {
+
+  let score = Number(document.getElementById('score').innerHTML);
+
+  if(document.getElementById("six").className == "up"){
+
+    score += 1;
+    document.getElementById('score').innerHTML = score;
+    document.getElementById("six").classList.remove('up');
+    document.getElementById("six").classList.add('down');
+  } 
+}

@@ -42,6 +42,10 @@ CSS for header section
   align-items: center;
 }
 
+.score_area {
+  font-size: 40px;
+}
+
 
 /******************************
 CSS for game area section

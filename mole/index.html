@@ -10,7 +10,7 @@
 
   <header id='title_section'>
     <h1 class='center'>Whack a Mole!</h1>
-    <p class='center'>Score:</p>
+    <p class='score_area center'>Score: <span id='score'>0</span></p>
     <button onclick='switchPic();'>Start</button>
   </header>
 
@@ -18,22 +18,22 @@
 
   <section id='game_area'>
 
-    <div class='down' id='one'>
+    <div onclick='hitOne();' class='down' id='one'>
     </div>
 
-    <div id='two'>
+    <div onclick='hitTwo();' class='down' id='two'>
     </div>
 
-    <div id='three'>
+    <div onclick='hitThree();' class='down' id='three'>
     </div>
 
-    <div id='four'>
+    <div onclick='hitFour();' class='down' id='four'>
     </div>
 
-    <div id='five'>
+    <div onclick='hitFive();' class='down' id='five'>
     </div>
 
-    <div id='six'>
+    <div onclick='hitSix();' class='down' id='six'>
     </div>
 
   </section>
