@@ -1,9 +1,8 @@
 //This file holds all of the javascript code for the project. 
 
-//This function will get the random numbers 
-function getPosition(positions) {
-  let position = '';
-
+//This function will get the random number
+function getPosition(position, positions) {
+  
   let randomNumber = Math.floor(Math.random() * 6);
 
   position = positions[randomNumber];
@@ -18,7 +17,7 @@ function change(){
 
   const positions = ['one', 'two', 'three', 'four', 'five', 'six'];
 
-  position = getPosition(positions);
+  position = getPosition(position, positions);
 
   if (document.getElementById(position).classList.contains('down') ){
     document.getElementById(position).classList.remove('down');
@@ -31,7 +30,7 @@ function change(){
 }
 
 //This function starts the game when the button is pressed. 
-function switchPic(){ 
+function switchPic(){   
 
   setInterval(function(){
     change();
@@ -39,12 +38,13 @@ function switchPic(){
 
 };
 
-
-//The functions below all deal with updating the score. I will say that I should have used a 
-//Global variable to get the positions value out of the array. That way, I would not have had to 
-//create so many functions! This is a very bad example of WET code!!!! 
+/*
+// The functions below all deal with updating the score. I will say that I should have used a 
+// Global variable to get the positions value out of the array. That way, I would not have had to 
+// create so many functions! This is a very bad example of WET code!!!! (Please see futher comments below)
+*/
 function hitOne() {
-  debugger;
+
   let score = Number(document.getElementById('score').innerHTML);
 
   if(document.getElementById("one").className == "up"){
@@ -120,3 +120,18 @@ function hitSix() {
     document.getElementById("six").classList.add('down');
   } 
 }
+
+
+//This is some of the code that I was trying to use to get rid of all the functions above that used the same code 
+//over and over again. The main issue that I have is that the position, the spot in the array must be synced with 
+//both the switchPic and hit functions. I tried doing this with a global variable and it somewhat worked but the 
+//switch position kept changing to fast.
+
+// let position  = '';
+// const positions = ['one', 'two', 'three', 'four', 'five', 'six'];
+// position = getPosition(position, positions);
+
+
+// window.load = setInterval(function(){
+//   position = getPosition(position, positions);
+// }, 1000);
